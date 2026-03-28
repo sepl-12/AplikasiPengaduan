@@ -18,7 +18,7 @@ class SiswasTable
                     ->searchable(),
                 TextColumn::make('nama_siswa')
                     ->searchable(),
-                TextColumn::make('id_kelas')
+                TextColumn::make('kelas.nama_kelas')
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('created_at')
