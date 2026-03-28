@@ -26,9 +26,10 @@ class PengaduanResource extends Resource
 
     protected static ?string $pluralModelLabel = "Manajemen Pengaduan";
 
+
     public static function form(Schema $schema): Schema
     {
-        return PengaduanForm::configure($schema);
+        return parent::form($schema);
     }
 
     public static function table(Table $table): Table
@@ -43,12 +44,16 @@ class PengaduanResource extends Resource
         ];
     }
 
+    public static function canCreate(): bool
+    {
+        return false;
+    }
+
     public static function getPages(): array
     {
         return [
             'index' => ListPengaduans::route('/'),
-            'create' => CreatePengaduan::route('/create'),
-            'edit' => EditPengaduan::route('/{record}/edit'),
         ];
     }
+
 }
