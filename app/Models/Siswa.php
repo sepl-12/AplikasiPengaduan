@@ -23,9 +23,14 @@ class Siswa extends Authenticatable implements FilamentUser
     }
 
 
+    public function getNameAttribute()
+    {
+        return $this->nama_siswa;
+    }
+
     public function kelas()
     {
-        return $this->belongsTo(Kelas::class);
+        return $this->belongsTo(Kelas::class, 'id_kelas', 'id');
     }
 
     public function pengaduan()
