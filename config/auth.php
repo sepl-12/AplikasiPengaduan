@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Siswa;
 use App\Models\User;
 
 return [
@@ -42,6 +43,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'siswa' => [
+            'driver' => 'session',
+            'provider' => 'siswas',
+        ],
     ],
 
     /*
@@ -65,6 +70,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', User::class),
+        ],
+
+        'siswas' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', Siswa::class),
         ],
 
         // 'users' => [
