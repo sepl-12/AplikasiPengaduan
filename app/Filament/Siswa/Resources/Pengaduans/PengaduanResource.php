@@ -22,10 +22,6 @@ class PengaduanResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'Pengaduan';
 
-    protected static ?string $modelLabel = "Pengaduan";
-
-    protected static ?string $pluralModelLabel = "Pengaduan";
-
     public static function form(Schema $schema): Schema
     {
         return PengaduanForm::configure($schema);

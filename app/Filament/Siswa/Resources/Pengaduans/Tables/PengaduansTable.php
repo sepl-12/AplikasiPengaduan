@@ -2,6 +2,7 @@
 
 namespace App\Filament\Siswa\Resources\Pengaduans\Tables;
 
+use App\StatusPengaduan;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -17,19 +18,19 @@ class PengaduansTable
                 TextColumn::make('tanggal_pengaduan')
                     ->date()
                     ->sortable(),
-                TextColumn::make('id_siswa')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('id_kategori')
+                TextColumn::make('kategori.nama_kategori')
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('lokasi')
                     ->searchable(),
                 TextColumn::make('status')
                     ->badge(),
-                TextColumn::make('user_id')
-                    ->numeric()
-                    ->sortable(),
+                TextColumn::make('feedback')
+                    ->label('Feedback')
+                    ->placeholder('Menunggu balasan'),
+                TextColumn::make('user.name')
+                    ->label('Admin yang Menangani')
+                    ->placeholder('Menunggu balasan'),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -43,11 +44,11 @@ class PengaduansTable
                 //
             ])
             ->recordActions([
-                EditAction::make(),
+                EditAction::make()
+                    ->disabled(fn($record) => $record->status !== StatusPengaduan::MENUNGGU),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
-                    DeleteBulkAction::make(),
                 ]),
             ]);
     }

@@ -15,31 +15,15 @@ class PengaduanForm
     {
         return $schema
             ->components([
-                DatePicker::make('tanggal_pengaduan')
-                    ->required()
-                    ->date(),
-                Select::make('id_siswa')
-                    ->required()
-                    ->relationship('siswa', 'nama_siswa')
-                    ->numeric(),
                 Select::make('id_kategori')
-                    ->required()
                     ->relationship('kategori', 'nama_kategori')
-                    ->numeric(),
+                    ->required()
+                    ->label('Nama Kategori'),
                 TextInput::make('lokasi')
                     ->required(),
                 Textarea::make('keterangan')
                     ->required()
                     ->columnSpanFull(),
-                Select::make('status')
-                    ->options(StatusPengaduan::class)
-                    ->default('menunggu')
-                    ->required(),
-                Textarea::make('feedback')
-                    ->columnSpanFull(),
-                TextInput::make('user_id')
-                    ->required()
-                    ->numeric(),
             ]);
     }
 }
