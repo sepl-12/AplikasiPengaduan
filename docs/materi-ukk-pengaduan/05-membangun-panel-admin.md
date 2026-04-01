@@ -46,6 +46,12 @@ Lalu sesuaikan provider yang dihasilkan.
 
 ## Kode lengkap `AdminPanelProvider`
 
+Command generator file ini:
+
+```bash
+php artisan filament:make-panel admin
+```
+
 Berikut isi file `app/Providers/Filament/AdminPanelProvider.php`:
 
 ```php
@@ -154,6 +160,12 @@ Setelah itu, atur:
 
 ### Kode lengkap `KategoriResource`
 
+Command generator file ini:
+
+```bash
+php artisan filament:make-resource Kategori --panel=admin
+```
+
 Berikut isi file `app/Filament/Resources/Kategoris/KategoriResource.php`:
 
 ```php
@@ -255,6 +267,7 @@ Penjelasan:
 
 - `TextInput::make('nama_kategori')` membuat input nama kategori
 - `->required()` berarti field wajib diisi
+- `KategoriForm.php` ikut dibuat saat command resource dijalankan, jadi tidak perlu command terpisah
 
 ### Tabel kategori
 
@@ -315,6 +328,7 @@ Penjelasan:
 - `->searchable()` membuat data bisa dicari
 - `EditAction::make()` menambahkan tombol edit
 - `DeleteBulkAction::make()` menambahkan hapus massal
+- `KategorisTable.php` juga ikut dibuat oleh command resource yang sama
 
 ## Membuat resource kelas
 
@@ -335,6 +349,12 @@ Tabel menampilkan:
 - updated at
 
 ### Kode lengkap `KelasResource`
+
+Command generator file ini:
+
+```bash
+php artisan filament:make-resource Kelas --panel=admin
+```
 
 Berikut isi file `app/Filament/Resources/Kelas/KelasResource.php`:
 
@@ -468,6 +488,7 @@ Penjelasan:
 - struktur resource kelas hampir sama dengan kategori
 - bedanya hanya model, label, ikon, dan field yang ditampilkan
 - pola seperti ini umum di Filament, jadi siswa perlu membiasakan diri membacanya
+- `KelasForm.php` dan `KelasTable.php` ikut dibuat saat command resource dijalankan
 
 ## Membuat resource siswa
 
@@ -492,6 +513,12 @@ Bagian penting:
 Artinya, daftar kelas langsung diambil dari tabel `kelas`.
 
 ### Kode lengkap `SiswaResource`
+
+Command generator file ini:
+
+```bash
+php artisan filament:make-resource Siswa --panel=admin
+```
 
 Berikut isi file `app/Filament/Resources/Siswas/SiswaResource.php`:
 
@@ -643,6 +670,7 @@ Penjelasan:
 - `id_kelas` memakai `Select` dengan `relationship()` agar pilihan kelas otomatis diambil dari tabel `kelas`
 - pada tabel siswa, `kelas.nama_kelas` dipakai untuk menampilkan nama kelas hasil relasi
 - password dibuat dengan `->password()` agar input tidak terlihat
+- `SiswaForm.php` dan `SiswasTable.php` tidak perlu command terpisah karena ikut dalam generator resource
 
 ## Pola yang harus siswa pahami dari resource admin
 

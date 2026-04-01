@@ -31,6 +31,12 @@ Karena kebutuhan tampilannya berbeda:
 
 ## Kode lengkap `PengaduanResource` siswa
 
+Command generator file ini:
+
+```bash
+php artisan filament:make-resource Pengaduan --panel=siswa
+```
+
 Berikut isi file `app/Filament/Siswa/Resources/Pengaduans/PengaduanResource.php`:
 
 ```php
@@ -92,6 +98,7 @@ Penjelasan:
 - `form()` menghubungkan ke schema form siswa
 - `table()` menghubungkan ke table siswa
 - `getPages()` mengatur halaman list, create, dan edit
+- `PengaduanForm.php`, `PengaduansTable.php`, dan page default ikut dibuat lewat command resource ini
 
 ## Form pengaduan siswa
 
@@ -178,6 +185,12 @@ Ini adalah langkah yang sangat penting.
 
 ## Kode lengkap page `CreatePengaduan`
 
+Command generator file ini:
+
+```bash
+php artisan filament:make-resource Pengaduan --panel=siswa
+```
+
 Berikut isi file `app/Filament/Siswa/Resources/Pengaduans/Pages/CreatePengaduan.php`:
 
 ```php
@@ -212,6 +225,7 @@ Penjelasan:
 - `id_siswa` diambil dari akun siswa yang sedang login
 - `tanggal_pengaduan` diambil dari tanggal hari ini
 - `status` selalu dimulai dari `MENUNGGU`
+- file page ini biasanya ikut terbentuk dari generator resource lalu disesuaikan manual
 
 ## Kenapa `id_siswa` tidak boleh diisi manual?
 
@@ -316,6 +330,12 @@ Aturan ini bagus untuk menjaga konsistensi data.
 
 ## Kode lengkap page daftar dan edit
 
+Command generator file ini:
+
+```bash
+php artisan filament:make-resource Pengaduan --panel=siswa
+```
+
 Berikut isi file `app/Filament/Siswa/Resources/Pengaduans/Pages/ListPengaduans.php`:
 
 ```php
@@ -370,6 +390,7 @@ Penjelasan:
 - `CreateAction::make()` menampilkan tombol tambah pengaduan
 - `EditPengaduan` dipakai saat siswa memperbarui laporan
 - `DeleteAction::make()` memberi opsi hapus dari halaman edit
+- kedua file page ini juga ikut dibuat saat generator resource dijalankan
 
 ## Apakah siswa bisa menghapus pengaduan?
 

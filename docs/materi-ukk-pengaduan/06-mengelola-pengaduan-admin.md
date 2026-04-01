@@ -25,6 +25,12 @@ Karena pengaduan dibuat oleh siswa, bukan admin.
 
 ## Kode lengkap `PengaduanResource`
 
+Command generator file ini:
+
+```bash
+php artisan filament:make-resource Pengaduan --panel=admin
+```
+
 Berikut isi file `app/Filament/Resources/Pengaduans/PengaduanResource.php`:
 
 ```php
@@ -93,6 +99,7 @@ Penjelasan:
 - ikon menu memakai `Heroicon::DocumentText`
 - `canCreate()` mengembalikan `false`, jadi admin tidak bisa membuat pengaduan baru
 - halaman yang dipakai hanya `index`, artinya fokus admin hanya melihat daftar dan mereview data
+- `PengaduansTable.php` dan page default resource ikut dibuat bersama command ini
 
 ## Kode lengkap `PengaduansTable`
 
@@ -314,6 +321,12 @@ Lalu sistem akan otomatis menyimpan:
 
 ## Kode lengkap page daftar pengaduan admin
 
+Command generator file ini:
+
+```bash
+php artisan filament:make-resource Pengaduan --panel=admin
+```
+
 Berikut isi file `app/Filament/Resources/Pengaduans/Pages/ListPengaduans.php`:
 
 ```php
@@ -341,6 +354,7 @@ Penjelasan:
 
 - page ini dipakai untuk menampilkan daftar semua pengaduan
 - `getHeaderActions()` dikosongkan, jadi tidak ada tombol create di atas tabel
+- file page ini biasanya ikut terbentuk saat generator resource dijalankan
 
 ## Kode page lain yang ada di proyek
 

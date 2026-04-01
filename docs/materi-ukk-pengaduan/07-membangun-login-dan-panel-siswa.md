@@ -163,6 +163,12 @@ Hal yang diubah:
 
 ## Kode lengkap `SiswaPanelProvider`
 
+Command generator file ini:
+
+```bash
+php artisan filament:make-panel siswa
+```
+
 Berikut isi file `app/Providers/Filament/SiswaPanelProvider.php`:
 
 ```php
@@ -237,6 +243,18 @@ Penjelasan:
 - resource siswa akan dibaca dari folder `app/Filament/Siswa/Resources`
 
 ## Kode lengkap `LoginSiswa`
+
+Command generator file ini:
+
+```bash
+php artisan filament:make-page LoginSiswa --panel=siswa
+```
+
+Catatan:
+
+- command di atas membuat file page dasar
+- setelah itu class perlu disesuaikan manual agar mewarisi `Filament\Auth\Pages\Login`
+- field login juga perlu diubah agar memakai `nis`
 
 Berikut isi file `app/Filament/Siswa/Pages/LoginSiswa.php`:
 
