@@ -24,87 +24,26 @@ Proyek ini memakai tabel utama berikut:
 
 ## Fungsi masing-masing tabel
 
-### 1. Tabel `users`
-
-Dipakai untuk akun admin.
-
-Kolom penting:
-
-- `id`
-- `name`
-- `email`
-- `password`
-
-### 2. Tabel `kategoris`
-
-Dipakai untuk jenis pengaduan.
-
-Contoh isi:
-
-- Meja dan Kursi
-- Listrik
-- Toilet
-- Kipas Angin
-
-Kolom penting:
-
-- `id`
-- `nama_kategori`
-
-### 3. Tabel `kelas`
-
-Dipakai untuk menyimpan daftar kelas siswa.
-
-Contoh isi:
-
-- X RPL 1
-- XI TKJ 2
-- XII AKL 1
-
-Kolom penting:
-
-- `id`
-- `nama_kelas`
-
-### 4. Tabel `siswas`
-
-Dipakai untuk akun siswa.
-
-Kolom penting:
-
-- `id`
-- `nis`
-- `nama_siswa`
-- `id_kelas`
-- `password`
-- `remember_token`
-
-### 5. Tabel `pengaduans`
-
-Ini tabel inti aplikasi.
-
-Kolom penting:
-
-- `id`
-- `tanggal_pengaduan`
-- `id_siswa`
-- `id_kategori`
-- `lokasi`
-- `keterangan`
-- `status`
-- `feedback`
-- `user_id`
+| Tabel | Fungsi | Contoh isi | Kolom penting |
+| --- | --- | --- | --- |
+| `users` | Menyimpan akun admin | Admin TU, Admin Sarpras | `id`, `name`, `email`, `password` |
+| `kategoris` | Menyimpan jenis pengaduan | Meja dan Kursi, Listrik, Toilet, Kipas Angin | `id`, `nama_kategori` |
+| `kelas` | Menyimpan daftar kelas siswa | X RPL 1, XI TKJ 2, XII AKL 1 | `id`, `nama_kelas` |
+| `siswas` | Menyimpan akun siswa | Data login dan identitas siswa | `id`, `nis`, `nama_siswa`, `id_kelas`, `password`, `remember_token` |
+| `pengaduans` | Menyimpan laporan kerusakan atau keluhan sarana prasarana | Laporan lampu mati, kursi rusak, toilet rusak | `id`, `tanggal_pengaduan`, `id_siswa`, `id_kategori`, `lokasi`, `keterangan`, `status`, `feedback`, `user_id` |
 
 ## Arti kolom penting pada tabel pengaduan
 
-- `tanggal_pengaduan` menyimpan tanggal laporan dibuat
-- `id_siswa` menunjukkan siapa yang melapor
-- `id_kategori` menunjukkan jenis laporan
-- `lokasi` menunjukkan tempat kerusakan
-- `keterangan` berisi penjelasan masalah
-- `status` berisi tahap penanganan
-- `feedback` berisi tanggapan admin
-- `user_id` berisi admin yang menangani
+| Kolom | Fungsi |
+| --- | --- |
+| `tanggal_pengaduan` | Menyimpan tanggal laporan dibuat |
+| `id_siswa` | Menunjukkan siapa siswa yang melapor |
+| `id_kategori` | Menunjukkan jenis pengaduan yang dipilih |
+| `lokasi` | Menunjukkan tempat kerusakan atau masalah ditemukan |
+| `keterangan` | Berisi penjelasan detail dari siswa |
+| `status` | Menyimpan tahap penanganan laporan |
+| `feedback` | Menyimpan tanggapan atau balasan dari admin |
+| `user_id` | Menyimpan admin yang menangani pengaduan |
 
 ## Relasi antar tabel
 
@@ -219,20 +158,11 @@ Penjelasan:
 - `feedback` boleh kosong karena admin belum tentu langsung membalas
 - `user_id` menghubungkan laporan ke admin yang menangani
 
-### Migration tambahan untuk `user_id` nullable
 
-Pada proyek ini, ada migration lanjutan karena pengaduan baru dibuat siswa lebih dulu, sementara admin belum langsung menangani. Karena itu `user_id` diubah menjadi nullable.
 
-```php
-Schema::table('pengaduans', function (Blueprint $table) {
-    $table->unsignedBigInteger('user_id')->nullable()->change();
-});
-```
 
-Penjelasan:
 
-- saat pengaduan baru dibuat, kolom `user_id` masih boleh kosong
-- setelah admin mereview pengaduan, barulah `user_id` diisi
+
 
 ## Urutan berpikir saat membuat migration
 
@@ -243,6 +173,9 @@ Supaya tidak bingung, gunakan urutan berpikir ini:
 3. Tentukan tabel mana yang menjadi induk dan mana yang menjadi anak.
 4. Tambahkan foreign key setelah hubungan datanya jelas.
 5. Tentukan kolom mana yang wajib diisi dan mana yang boleh kosong.
+
+
+
 
 ## Hal penting saat membuat migration
 
@@ -255,6 +188,9 @@ Perhatikan:
 - nullable atau tidak
 - nilai default
 
+
+
+
 ## Contoh keputusan penting dalam proyek ini
 
 Beberapa keputusan yang dipakai:
@@ -263,6 +199,9 @@ Beberapa keputusan yang dipakai:
 - `status` diberi nilai awal `menunggu`
 - `feedback` boleh kosong karena admin belum tentu langsung membalas
 - `user_id` akhirnya dibuat nullable karena pengaduan baru belum ditangani admin
+
+
+
 
 ## Checkpoint
 
