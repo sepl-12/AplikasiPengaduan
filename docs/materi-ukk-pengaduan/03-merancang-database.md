@@ -205,7 +205,7 @@ Schema::create('pengaduans', function (Blueprint $table) {
     $table->text('keterangan');
     $table->enum('status', ['menunggu', 'proses', 'selesai'])->default('menunggu');
     $table->text('feedback')->nullable();
-    $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
+    $table->foreignId('user_id')->nullable()->constrained('users')->cascadeOnDelete();
     $table->timestamps();
 });
 ```
