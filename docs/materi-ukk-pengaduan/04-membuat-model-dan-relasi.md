@@ -359,3 +359,7 @@ Setelah modul ini, kamu harus paham:
 - bentuk kode lengkap setiap model di proyek ini
 
 Setelah model siap, lanjut ke modul 5 untuk membuat panel admin dan data master.
+
+## Navigasi Modul
+
+[⬅ Modul Sebelumnya: Merancang Database](./03-merancang-database.md) | [Daftar Modul](./README.md) | [Modul Berikutnya: Panel Admin ➜](./05-membangun-panel-admin.md)

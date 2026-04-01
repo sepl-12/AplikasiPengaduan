@@ -132,3 +132,7 @@ Kalau kamu sudah mengikuti semua modul dari 1 sampai 9, berarti kamu sudah memah
 - menguji aplikasi sampai siap dipresentasikan
 
 Saran terakhir: coba ulangi pembuatan proyek ini sekali lagi dari awal tanpa terlalu bergantung pada materi. Di situlah biasanya pemahaman mulai benar-benar kuat.
+
+## Navigasi Modul
+
+[⬅ Modul Sebelumnya: Fitur Pengaduan Siswa](./08-membuat-fitur-pengaduan-siswa.md) | [Daftar Modul](./README.md) | [Modul Berikutnya: Struktur Project dan Cheatsheet ➜](./10-struktur-project-dan-cheatsheet-command.md)

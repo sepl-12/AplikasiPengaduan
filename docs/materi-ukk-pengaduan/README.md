@@ -57,6 +57,7 @@ Baca modul secara berurutan:
 7. [07-membangun-login-dan-panel-siswa.md](./07-membangun-login-dan-panel-siswa.md)
 8. [08-membuat-fitur-pengaduan-siswa.md](./08-membuat-fitur-pengaduan-siswa.md)
 9. [09-pengujian-dan-penyelesaian.md](./09-pengujian-dan-penyelesaian.md)
+10. [10-struktur-project-dan-cheatsheet-command.md](./10-struktur-project-dan-cheatsheet-command.md)
 
 ## Urutan implementasi yang harus dikerjakan
 
@@ -87,6 +88,7 @@ Jika pembaca ingin langsung praktik membuat aplikasi, pakai urutan kerja ini:
 - Modul 7 berisi konfigurasi login siswa, guard, panel siswa, dan login custom.
 - Modul 8 berisi kode lengkap resource pengaduan siswa.
 - Modul 9 berisi skenario pengujian, demo, dan penutupan proyek.
+- Modul 10 berisi struktur project dan cheatsheet command Laravel + Filament.
 
 ## Cara menggunakan materi ini
 

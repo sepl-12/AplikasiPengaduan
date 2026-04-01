@@ -549,3 +549,7 @@ Inti modul ini:
 - command harian paling penting ada di `php artisan`, `composer`, dan generator Filament
 
 Setelah modul ini, kamu seharusnya lebih cepat mencari file, memahami alur project, dan tahu command mana yang perlu dijalankan saat mengembangkan aplikasi.
+
+## Navigasi Modul
+
+[⬅ Modul Sebelumnya: Pengujian dan Penyelesaian](./09-pengujian-dan-penyelesaian.md) | [Daftar Modul](./README.md)

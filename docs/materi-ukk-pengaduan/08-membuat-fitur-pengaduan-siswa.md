@@ -436,3 +436,7 @@ Pastikan:
 - edit hanya aktif saat status masih `menunggu`
 
 Setelah fitur siswa selesai, lanjut ke modul 9 untuk pengujian dan penyelesaian proyek.
+
+## Navigasi Modul
+
+[⬅ Modul Sebelumnya: Login dan Panel Siswa](./07-membangun-login-dan-panel-siswa.md) | [Daftar Modul](./README.md) | [Modul Berikutnya: Pengujian dan Penyelesaian ➜](./09-pengujian-dan-penyelesaian.md)

@@ -92,17 +92,10 @@ Perintah ini akan membuat tabel bawaan Laravel seperti:
 
 ## Menjalankan server
 
-Untuk backend:
-
 ```bash
 php artisan serve
 ```
 
-Untuk Vite:
-
-```bash
-npm run dev
-```
 
 ## Struktur folder penting yang harus kamu kenal
 
@@ -138,3 +131,7 @@ Sebelum lanjut ke modul berikutnya, pastikan:
 - halaman awal Laravel bisa dibuka
 
 Jika semua sudah siap, lanjut ke modul 3 untuk merancang database.
+
+## Navigasi Modul
+
+[⬅ Modul Sebelumnya: Gambaran Proyek](./01-gambaran-proyek.md) | [Daftar Modul](./README.md) | [Modul Berikutnya: Merancang Database ➜](./03-merancang-database.md)

@@ -715,3 +715,7 @@ Pastikan:
 - data master bisa ditambah dan diedit
 
 Setelah panel admin siap, lanjut ke modul 6 untuk mengelola pengaduan dari sisi admin.
+
+## Navigasi Modul
+
+[⬅ Modul Sebelumnya: Model dan Relasi](./04-membuat-model-dan-relasi.md) | [Daftar Modul](./README.md) | [Modul Berikutnya: Pengaduan Admin ➜](./06-mengelola-pengaduan-admin.md)

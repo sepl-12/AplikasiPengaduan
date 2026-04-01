@@ -363,3 +363,7 @@ Pastikan:
 - panel admin dan panel siswa sudah terpisah
 
 Setelah login siswa berhasil, lanjut ke modul 8 untuk membuat fitur pengaduan dari sisi siswa.
+
+## Navigasi Modul
+
+[⬅ Modul Sebelumnya: Pengaduan Admin](./06-mengelola-pengaduan-admin.md) | [Daftar Modul](./README.md) | [Modul Berikutnya: Fitur Pengaduan Siswa ➜](./08-membuat-fitur-pengaduan-siswa.md)

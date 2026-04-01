@@ -461,3 +461,7 @@ Pastikan:
 - admin penangan ditampilkan
 
 Setelah sisi admin untuk pengaduan selesai, lanjut ke modul 7 untuk membuat login dan panel khusus siswa.
+
+## Navigasi Modul
+
+[⬅ Modul Sebelumnya: Panel Admin](./05-membangun-panel-admin.md) | [Daftar Modul](./README.md) | [Modul Berikutnya: Login dan Panel Siswa ➜](./07-membangun-login-dan-panel-siswa.md)

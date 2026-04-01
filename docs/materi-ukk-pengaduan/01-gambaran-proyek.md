@@ -116,3 +116,7 @@ Inti modul ini:
 - siswa mengirim pengaduan dan melihat hasil penanganannya
 
 Setelah paham gambaran besarnya, lanjut ke modul 2 untuk menyiapkan lingkungan kerja.
+
+## Navigasi Modul
+
+[Daftar Modul](./README.md) | [Modul Berikutnya: Persiapan Lingkungan ➜](./02-persiapan-lingkungan.md)

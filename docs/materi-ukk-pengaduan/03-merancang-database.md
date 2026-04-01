@@ -273,3 +273,7 @@ Sebelum lanjut:
 - kamu paham kenapa `pengaduans` menjadi tabel utama
 
 Setelah struktur data siap, lanjut ke modul 4 untuk membuat model dan relasi Eloquent.
+
+## Navigasi Modul
+
+[⬅ Modul Sebelumnya: Persiapan Lingkungan](./02-persiapan-lingkungan.md) | [Daftar Modul](./README.md) | [Modul Berikutnya: Model dan Relasi ➜](./04-membuat-model-dan-relasi.md)
